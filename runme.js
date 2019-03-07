@@ -24,6 +24,13 @@ var mimeTypes = {
   "css": "text/css"
 };
 
+console.log("Starting...");
+
+if (process.env.PORT == undefined) {
+  console.log("Port undefined from env var so setting to 9000");
+  process.env.PORT = 9000;
+}
+
 http.createServer(function(req, res) {
 
   var uri = url.parse(req.url).pathname;
@@ -155,7 +162,10 @@ http.createServer(function(req, res) {
     
   }
 
+  console.log("Server running on port", process.env.PORT);
+
 }).listen(process.env.PORT);
+console.log("Started server on:", process.env.PORT);
 
 String.prototype.regexIndexOf = function(regex, startpos) {
     var indexOf = this.substring(startpos || 0).search(regex);
