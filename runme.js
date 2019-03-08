@@ -1196,11 +1196,18 @@ var pushToGithubSync = function() {
   // git add *
   // git commit -m "Made some changes to ChiliPeppr widget using Cloud9"
   // git push
+  var whichEnv = "local machine";
+  if (isAwsEnvironment()) {
+    whichEnv = "AWS Cloud9";
+  } else if (isC9Environment()) {
+    whichEnv = "Cloud9";
+  }
+
   var stdout = "";
   stdout += "> git add *\n";
-  stdout += '> git commit -m "Made some changes to ChiliPeppr myWorkspace using Cloud9"\n';
+  stdout += '> git commit -m "Made some changes to ChiliPeppr workspace using ' + whichEnv + '"\n';
   stdout += "> git push\n";
-  stdout += proc.execSync('git add *; git commit -m "Made some changes to ChiliPeppr myWorkspace using Cloud9"; git push;', { encoding: 'utf8' });
+  stdout += proc.execSync('git add *; git commit -m "Made some changes to ChiliPeppr workspace using ' + whichEnv + '"; git push;', { encoding: 'utf8' });
   console.log("Pushed to github sync. Stdout:", stdout);
   
   return stdout;
@@ -1208,11 +1215,18 @@ var pushToGithubSync = function() {
 
 var pushToGithubAsync = function() {
   var exec = require('child_process').exec;
+  
+  var whichEnv = "local machine";
+  if (isAwsEnvironment()) {
+    whichEnv = "AWS Cloud9";
+  } else if (isC9Environment()) {
+    whichEnv = "Cloud9";
+  }
 
   exec('git add *', function(error1, stdout1, stderr1) {
     // command output is in stdout
     console.log("stdout:", stdout1, "stderr:", stderr1);
-    exec('bash -c "git commit -m \\"Made some changes to ChiliPeppr myWorkspace using Cloud9\\""', function(error2, stdout2, stderr2) {
+    exec('bash -c "git commit -m \\"Made some changes to ChiliPeppr workspace using ' + whichEnv + '\\""', function(error2, stdout2, stderr2) {
       // command output is in stdout
       console.log("stdout:", stdout2, "stderr:", stderr2);
       exec('git push', function(error3, stdout3, stderr3) {
