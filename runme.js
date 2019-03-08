@@ -202,10 +202,10 @@ var widgetDocs = {};
 
 var init = function() {
   urls = getAllUrls();
-  widgetUrl = urls.widgetUrl;
-  testUrl = urls.testUrl;
-  testUrlNoSsl = urls.testUrlNoSsl;
-  editUrl = urls.editUrl;
+  widgetUrl = urls.cpload;
+  testUrl = urls.test;
+  testUrlNoSsl = urls.testNoSsl;
+  editUrl = urls.edit;
   github = getGithubUrl();
 }
 

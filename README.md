@@ -15,9 +15,9 @@ not conflict with other ChiliPeppr objects.
 | Name                  | Workspace / Robot |
 | Description           | This workspace is for controlling a 6 DOF robot arm. |
 | chilipeppr.load() URL | https://raw.githubusercontent.com/chilipeppr/workspace-robot/master/auto-generated-workspace.html |
-| Edit URL              | undefined |
+| Edit URL              | (Local dev. No edit URL) |
 | Github URL            | https://github.com/chilipeppr/workspace-robot |
-| Test URL              | undefined |
+| Test URL              | http://localhost:9000/widget.html |
 
 ## Example Code for chilipeppr.load() Statement
 
@@ -135,7 +135,7 @@ The table below shows, in order, the methods and properties inside the workspace
           </tr>
       </thead>
       <tbody>
-      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-workspace-robot"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Workspace / Robot"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"This workspace is for controlling a 6 DOF robot arm."</td></tr><tr valign="top"><td>url</td><td>string</td><td>"https://raw.githubusercontent.com/chilipeppr/workspace-robot/master/auto-generated-workspace.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"undefined"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"https://github.com/chilipeppr/workspace-robot"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"undefined"</td></tr><tr valign="top"><td>foreignSubscribe</td><td>object</td><td>Please see docs above.</td></tr><tr valign="top"><td>foreignPublish</td><td>object</td><td>Please see docs above.</td></tr><tr valign="top"><td>widgetConsole</td><td>object</td><td>Contains reference to the Console widget object. Hang onto the reference
+      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-workspace-robot"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Workspace / Robot"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"This workspace is for controlling a 6 DOF robot arm."</td></tr><tr valign="top"><td>url</td><td>string</td><td>"https://raw.githubusercontent.com/chilipeppr/workspace-robot/master/auto-generated-workspace.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"(Local dev. No edit URL)"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"https://github.com/chilipeppr/workspace-robot"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"https://raw.githubusercontent.com/chilipeppr/workspace-robot/master/auto-generated-workspace.html"</td></tr><tr valign="top"><td>foreignSubscribe</td><td>object</td><td>Please see docs above.</td></tr><tr valign="top"><td>foreignPublish</td><td>object</td><td>Please see docs above.</td></tr><tr valign="top"><td>widgetConsole</td><td>object</td><td>Contains reference to the Console widget object. Hang onto the reference
 so we can resize it when the window resizes because we want it to manually
 resize to fill the height of the browser so it looks clean.</td></tr><tr valign="top"><td>widgetSpjs</td><td>object</td><td>Contains reference to the Serial Port JSON Server object.</td></tr><tr valign="top"><td>init</td><td>function</td><td>function() <br><br>The workspace's init method. It loads the all the widgets contained in the workspace
 and inits them.</td></tr><tr valign="top"><td>getBillboard</td><td>function</td><td>function() <br><br>Returns the billboard HTML, CSS, and Javascript for this Workspace. The billboard
