@@ -39,7 +39,7 @@ chilipeppr.load(
     // Callback after workspace loaded into #pnlWorkspace
     // Now use require.js to get reference to instantiated workspace
     cprequire(
-      ["inline:com-chilipeppr-workspace-tinyg"], // the id you gave your workspace
+      ["inline:com-chilipeppr-workspace-robot"], // the id you gave your workspace
       function(myWorkspaceRobot) {
         // Callback that is passed reference to the newly loaded workspace
         console.log("Workspace / Robot just got loaded.", myWorkspaceRobot);
