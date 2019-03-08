@@ -1457,9 +1457,9 @@ var getAllUrls = function() {
     // https://vfs.cloud9.us-west-2.amazonaws.com/vfs/83c03ab3f6f9431aa813882decbfc4aa/preview/widget-xbox/widget.html
     ret.test = 'https://vfs.cloud9.' + region + '.amazonaws.com/vfs/' + 
         process.env.C9_PID + '/preview/' + 
-        process.env.C9_PROJECT + '/widget.html';
+        process.env.C9_PROJECT + '/workspace.html';
     // http://83c03ab3f6f9431aa813882decbfc4aa.vfs.cloud9.us-west-2.amazonaws.com/widget.html
-    ret.testNoSsl = 'http://' + process.env.C9_PID + '.vfs.cloud9.' + region + '.amazonaws.com/widget.html';
+    ret.testNoSsl = 'http://' + process.env.C9_PID + '.vfs.cloud9.' + region + '.amazonaws.com/workspace.html';
     // http://83c03ab3f6f9431aa813882decbfc4aa.vfs.cloud9.us-west-2.amazonaws.com/
     ret.runmeHomepage = 'https://' + process.env.C9_PID + '.vfs.cloud9.' + region + '.amazonaws.com/';
   
@@ -1475,9 +1475,9 @@ var getAllUrls = function() {
         process.env.C9_PROJECT;
     ret.test = 'https://preview.c9users.io/' +
         process.env.C9_USER + '/' +
-        process.env.C9_PROJECT + '/widget.html';
+        process.env.C9_PROJECT + '/workspace.html';
     ret.testNoSsl = 'http://' + process.env.C9_PROJECT +
-        '-' + process.env.C9_USER + '.c9users.io/widget.html';
+        '-' + process.env.C9_USER + '.c9users.io/workspace.html';
     // https://widget-xbox-chilipeppr.c9users.io/
     ret.runmeHomepage = 'https://' + process.env.C9_PROJECT +
         '-' + process.env.C9_USER + '.c9users.io/';
@@ -1490,8 +1490,8 @@ var getAllUrls = function() {
     //     process.env.C9_PROJECT + '-' + process.env.C9_USER +
     //     '.c9users.io/widget.html';
     ret.edit = '(Local dev. No edit URL)';
-    ret.test = 'http://localhost:9000/widget.html';
-    ret.testNoSsl = 'http://localhost:9000/widget.html';
+    ret.test = 'http://localhost:9000/workspace.html';
+    ret.testNoSsl = 'http://localhost:9000/workspace.html';
     // https://widget-xbox-chilipeppr.c9users.io/
     ret.runmeHomepage = 'http://localhost:9000/';
   }
