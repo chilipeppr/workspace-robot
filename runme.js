@@ -1581,9 +1581,10 @@ var triggerStorageOfCredentials = function() {
   triggerStorageOfCredentials();
 // }
 
+init();
+
 var urls = getAllUrls();
 console.log("urls:", urls);
 console.log("");
 console.log("You can now view the home page of runme.js at " + urls.runmeHomepage);
 
-init();
