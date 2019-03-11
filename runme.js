@@ -1490,10 +1490,10 @@ var getAllUrls = function() {
     //     process.env.C9_PROJECT + '-' + process.env.C9_USER +
     //     '.c9users.io/widget.html';
     ret.edit = '(Local dev. No edit URL)';
-    ret.test = 'http://localhost:9000/workspace.html';
-    ret.testNoSsl = 'http://localhost:9000/workspace.html';
+    ret.test = 'http://localhost:' + process.env.PORT + '/workspace.html';
+    ret.testNoSsl = 'http://localhost:' + process.env.PORT + '/workspace.html';
     // https://widget-xbox-chilipeppr.c9users.io/
-    ret.runmeHomepage = 'http://localhost:9000/';
+    ret.runmeHomepage = 'http://localhost:' + process.env.PORT + '/';
   }
 
   // console.log("URLs we are using:", ret);
