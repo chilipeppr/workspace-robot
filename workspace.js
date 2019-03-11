@@ -442,14 +442,13 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             // http://jsfiddle.net/chilipeppr/y3HRF
             chilipeppr.load(
                 "#com-chilipeppr-3dviewer",
-                //"http://fiddle.jshell.net/chilipeppr/y3HRF/show/light/",
-                "http://raw.githubusercontent.com/chilipeppr/widget-3dviewer/master/auto-generated-widget.html",
+                "http://raw.githubusercontent.com/chilipeppr/widget-3dview-robot/master/auto-generated-widget.html",
     
                 function() {
                     console.log("got callback done loading 3d");
     
                     cprequire(
-                        ['inline:com-chilipeppr-widget-3dviewer'],
+                        ['inline:com-chilipeppr-widget-3dview-robot'],
     
                         function(threed) {
                             console.log("Running 3dviewer");
