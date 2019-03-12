@@ -95,7 +95,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             setTimeout(function() {
                 $(window).trigger('resize');
                 $('title').html("Robot Workspace");
-            }, 3000);
+            }, 5000);
 
 
         },
@@ -257,6 +257,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
                         }
                         $(window).trigger('resize');
                     });
+                    zwBtn.click();
                   }
                 );
               }
