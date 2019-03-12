@@ -515,8 +515,9 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             // http://jsfiddle.net/chilipeppr/gh45j/
             chilipeppr.load(
                 "com-chilipeppr-xyz",
+                "http://raw.githubusercontent.com/chilipeppr/widget-robot-axes/master/auto-generated-widget.html", 
                 // Lauer's new widget 8/16/15
-                "http://raw.githubusercontent.com/chilipeppr/widget-axes/master/auto-generated-widget.html", 
+                // "http://raw.githubusercontent.com/chilipeppr/widget-axes/master/auto-generated-widget.html", 
                 // Temporary widget from Danal
                 //"http://fiddle.jshell.net/Danal/vktco1y6/show/light/", 
                 // Lauer's original core widget
