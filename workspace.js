@@ -266,6 +266,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
 
             // Zipwhip texting
             // com-chilipeppr-ws-zipwhip
+            /*
             chilipeppr.load(
                 "#com-chilipeppr-ws-zipwhip",
                 "http://raw.githubusercontent.com/chilipeppr/widget-zipwhip/master/auto-generated-widget.html",
@@ -289,11 +290,12 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
                         });
                     });
                 }); //End Zipwhip texting
-
+            */
 
             // Zipwhip Recieve Text widget
             // Dynamically load the Zipwhip Recieve Text widget, i.e. wait til user clicks on the button
             // first time.
+            /*
             wsObj.zipwhipRecvTextObj = {
                 zipwhipRecvTextBtn: null,
                 zipwhipRecvTextDiv: null,
@@ -367,6 +369,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
                 },
             };
             wsObj.zipwhipRecvTextObj.init();
+            */
             //End Zipwhip Receive Text
             
            
@@ -531,6 +534,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             
 
             // Cayenn Widget
+            /*
             chilipeppr.load(
               "#com-chilipeppr-ws-cayenn",
               "http://raw.githubusercontent.com/chilipeppr/widget-cayenn/master/auto-generated-widget.html",
@@ -570,7 +574,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
                 );
               }
             );
-            
+            */
             
 
         },
