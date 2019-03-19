@@ -511,10 +511,11 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             
 
 
-            // XYZ
+            // Robot Axes (Formerly XYZ)
             // http://jsfiddle.net/chilipeppr/gh45j/
             chilipeppr.load(
                 "com-chilipeppr-xyz",
+                "https://raw.githubusercontent.com/chilipeppr/widget-robot-axes/master/auto-generated-widget.html",
                 // "http://raw.githubusercontent.com/chilipeppr/widget-robot-axes/master/auto-generated-widget.html", 
                 // Lauer's new widget 8/16/15
                 // "http://raw.githubusercontent.com/chilipeppr/widget-axes/master/auto-generated-widget.html", 
@@ -525,7 +526,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
         
                 function () {
                     cprequire(
-                    ["inline:com-chilipeppr-widget-xyz"],
+                    ["inline:com-chilipeppr-widget-robot-axes"],
             
                     function (xyz) {
                         xyz.init();
