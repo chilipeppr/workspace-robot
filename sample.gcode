@@ -1,0 +1,15 @@
+({CayennDevice:"Wrist3",Cmd:"G0",Steps:100})
+({Cmd:"G0",Steps:-100})
+(Configure A axis to linear slide settings. )
+{"1":{"sa":18,"tr":0.5," mi":1,"po":1,"p m":3,"pl":0}}
+(Axis mode is std like a linear axis.)
+{"a":{"am":1,"vm":800,"fr":800,"tn":0,"tm":72}}
+({Cmd:"AirOn"})
+G0 A-70 (Move linear slide down to -70mm)
+({"Cmd":"AugerFwd","Speed":5})
+(Move 10mm along x axis)
+G1 X5 F100 (100mm/min)
+({Cmd:"AugerOff"})
+({Cmd:"AirOff"})
+G0 A0 X0 (Move linear slide back to 0 while moving X)
+({Cmd:"LinearSlideOff"})
