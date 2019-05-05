@@ -301,7 +301,11 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             
             // This is a huge method that was built from the original jsfiddle workspace
             // we should technically put each widget in its own method for loading
-            this.loadWidgets();
+            var that = this;
+            setTimeout(function() {
+                that.loadWidgets();
+            }, 1000);
+            
 
             // Create our workspace upper right corner triangle menu
             this.loadWorkspaceMenu();
@@ -318,7 +322,7 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             setTimeout(function() {
                 $(window).trigger('resize');
                 $('title').html("Robot Workspace");
-            }, 5000);
+            }, 6000);
 
 
         },
@@ -450,6 +454,27 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
             // create a workspace object reference to this so inside the anonymous functions below
             // the workspace can be referred to
             var wsObj = this;
+
+            // Load Cayenn Widget
+            // Inject new div to contain widget or use an existing div with an ID
+            // $("body").append('<' + 'div id="myDivWidgetCayenn"><' + '/div>');
+
+            chilipeppr.load(
+            "#myDivWidgetCayenn",
+            "https://raw.githubusercontent.com/chilipeppr/widget-cayenn/master/auto-generated-widget.html",
+            function() {
+                // Callback after widget loaded into #myDivWidgetCayenn
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                ["inline:com-chilipeppr-widget-cayenn"], // the id you gave your widget
+                function(myObjWidgetCayenn) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Cayenn just got loaded.", myObjWidgetCayenn);
+                    myObjWidgetCayenn.init();
+                }
+                );
+            }
+            );
             
             // Load XBox Controller Widget
             chilipeppr.load(
@@ -480,7 +505,9 @@ cpdefine("inline:com-chilipeppr-workspace-robot", ["chilipeppr_ready"], function
                         }
                         $(window).trigger('resize');
                     });
-                    zwBtn.click();
+                    // zwBtn.click();
+                    zwDiv.removeClass("hidden");
+                    zwBtn.addClass("active");
                   }
                 );
               }
